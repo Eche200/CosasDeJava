@@ -11,11 +11,21 @@
 </head>
 <body>
 	<%
-		List<String> titulos = new ArrayList<String>();
-		titulos.add(0,(String) request.getAttribute("listaDeProductos"));
+		String[] titulos = (String[]) request.getAttribute("listaDeProductos");
+
+	out.println("Ahor con array");
+	out.println("<br>");
+		for(int x = 0;x < titulos.length; x++){
+			out.println(titulos[x]);
+		}
+		out.println("<br>");
+		out.println("Ahor con lists");
 		
-		
-			out.println(titulos.get(0));
+		List<String> titulos2 = new ArrayList<String>(Arrays.asList((String[]) request.getAttribute("listaDeProductos")));
+		out.println("<br>");
+		for(String titulo : titulos2){
+			out.println(titulo);
+		}
 			
 	%>
 </body>
