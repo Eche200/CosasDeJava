@@ -36,7 +36,7 @@ public class DataBaseConfiguration {
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		dataSource.setUrl("jdbc:mysql://localhost:3306/hibernateTabla");
 		dataSource.setUsername("Eche200");
-		dataSource.setPassword("Biologia1");
+		dataSource.setPassword("Biologia3103");
 		
 		return dataSource;
 		
