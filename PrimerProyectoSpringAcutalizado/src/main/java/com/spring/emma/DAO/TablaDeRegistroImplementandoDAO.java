@@ -9,6 +9,10 @@ package com.spring.emma.DAO;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Repository;
+
 import com.spring.model.TablaDeRegistro;
 
 
@@ -18,6 +22,9 @@ import com.spring.model.TablaDeRegistro;
 //aca hereda la clase abstract para poder llevar  la session a todas las clases dao
 //en todas las funciones esta GETSESSION eso es lo que traemos de la clase
 //abstracta , para no estar  instanciado , le dejamos todo a SPRING.
+
+@Repository
+@Transactional //esto indica que  todo se ejecuta de forma transaccional
 public class TablaDeRegistroImplementandoDAO extends AbstractSession implements TablaDeRegistroDAO {
 
 	/*llevar los datos  que quiero guardar a la base de datos .
